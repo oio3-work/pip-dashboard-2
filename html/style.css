@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: rptRegular;
+  src: url("font/ArbFONTS-arbfonts-rpt-Regular.ttf") format('truetype')
+}
+
+@font-face {
+  font-family: rptBold;
+  src: url("font/ArbFONTS-arbfonts-rpt-Bold.ttf") format('truetype')
+}
+
+.rpt-Bold{
+    font-family: rptBold;
+    font-weight: 600;
+}
+
+.rpt-Regular {
+    font-family: rptRegular;
+    font-weight: 400;
+}
+.textArabic{
+  margin-top: 0px;
+}
