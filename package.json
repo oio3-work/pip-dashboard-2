@@ -13,6 +13,7 @@
     "chart.js": "^4.4.6",
     "nuxt": "^3.14.1592",
     "preline": "^2.5.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "vue": "latest",
     "vue-chartjs": "^5.3.2",
     "vue-router": "latest"

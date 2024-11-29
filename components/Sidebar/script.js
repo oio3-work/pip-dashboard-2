@@ -8,6 +8,7 @@ const sideBarItems = reactive ([
         data: " ",
         coustomClass: "",
         icon: "solar:home-2-bold",
+        toPage:"/",
         children: [
     
         ]

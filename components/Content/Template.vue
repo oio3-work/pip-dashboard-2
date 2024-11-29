@@ -1,7 +1,7 @@
 <template>
   <!-- Content -->
  
-    <div class="space-y-4 sm:space-y-6">
+    <div class="space-y-4 sm:space-y-6 ">
       <!-- StatsCards -->
       <div class="grid grid-cols-3 gap-3 justify-between">
         <ContentStatsCardsTemplate

@@ -34,7 +34,7 @@
 
             <!-- Content -->
             <div
-                class="h-full overflow-y-auto [&amp;::-webkit-scrollbar]:w-2 [&amp;::-webkit-scrollbar-thumb]:rounded-full [&amp;::-webkit-scrollbar-track]:bg-gray-100 [&amp;::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&amp;::-webkit-scrollbar-track]:bg-neutral-700 dark:[&amp;::-webkit-scrollbar-thumb]:bg-neutral-500">
+                class="h-full overflow-y-auto [&amp;::-webkit-scrollbar]:w-0  ">
                 <nav class="hs-accordion-group p-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open="">
                     <ul class="flex flex-col space-y-1">
 
@@ -53,7 +53,6 @@
                                     <Icon class="  hs-accordion-active:hidden  block size-4 rotate-180"
                                         name="iconamoon:arrow-up-2"  ></Icon>
                                 </div>
-
                             </button>
 
                             <!-- child -->
