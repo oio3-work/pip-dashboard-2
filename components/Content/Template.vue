@@ -1,7 +1,7 @@
 <template>
   <!-- Content -->
-  <div class="h-dvh w-full lg:ps-64">
-    <div class="p-4 sm:p-6 space-y-4 sm:space-y-6">
+ 
+    <div class="space-y-4 sm:space-y-6">
       <!-- StatsCards -->
       <div class="grid grid-cols-3 gap-3 justify-between">
         <ContentStatsCardsTemplate
@@ -37,8 +37,9 @@
         </div>
         <!-- ===========  best Drivers  and Customers  ===========  -->
       </div>
-    </div>
-  </div>
+
+</div>
+  
 
   <!-- End Content -->
 </template>
@@ -47,8 +48,11 @@
 import { ref, onMounted } from "vue";
 import { Chart, registerables } from "chart.js";
 import cardStatsItems from "./StatsCards/script";
+import { days , numberOrderOfDaysCompelted , numberOrderOfDaysRejected} from './Chart/script';
 Chart.register(...registerables);
+
 onMounted(() => {
+  
   if (process.client) {
     const ctx = (
       document.getElementById("myChart") as HTMLCanvasElement
@@ -72,27 +76,11 @@ onMounted(() => {
     gradientFiled.addColorStop(1, "rgba(239, 68, 68, 0)");
 
     const data = {
-      labels: [
-        "25 Jan",
-        "26 Jan",
-        "27 Jan",
-        "28 Jan",
-        "29 Jan",
-        "30 Jan",
-        "31 Jan",
-        "1 Feb",
-        "2 Feb",
-        "3 Feb",
-        "4 Feb",
-        "5 Feb",
-      ],
+      labels: days,
       datasets: [
         {
           label: "المكتملة",
-          data: [
-            1500, 4500, 5000, 5800, 3500, 8500, 5000, 4500, 5000, 8500, 7500,
-            6500,
-          ],
+          data: numberOrderOfDaysCompelted,
           borderColor: "rgba(20, 184, 166, 0.5)",
           backgroundColor: gradientCompelet,
           fill: true,
@@ -101,10 +89,7 @@ onMounted(() => {
         },
         {
           label: "المرفوضة",
-          //   data: [2000, 350, 600, 750, 400, 480, 450, 250, 400, 250, 400, 500],
-          data: [
-            2000, 3050, 2000, 1050, 2000, 0, 4050, 2050, 4000, 250, 4000, 5000,
-          ],
+          data: numberOrderOfDaysRejected ,
           borderColor: "rgba(239, 68, 68, 0.5)",
           backgroundColor: gradientFiled,
           fill: true,
