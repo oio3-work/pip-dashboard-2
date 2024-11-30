@@ -1,45 +1,43 @@
 <template>
   <!-- Content -->
- 
-    <div class="space-y-4 sm:space-y-6 ">
-      <!-- StatsCards -->
-      <div class="grid grid-cols-3 gap-3 justify-between">
-        <ContentStatsCardsTemplate
-          v-for="(cardStatsItem, index) in cardStatsItems"
-          :period="cardStatsItem.period"
-          :completed="cardStatsItem.completed"
-          :rejected="cardStatsItem.rejected"
-          :key="index"
-        />
+
+  <div class="space-y-4 sm:space-y-6">
+    <!-- StatsCards -->
+    <div class="grid grid-cols-3 gap-3 justify-between">
+      <ContentStatsCardsTemplate
+        v-for="(cardStatsItem, index) in cardStatsItems"
+        :period="cardStatsItem.period"
+        :completed="cardStatsItem.completed"
+        :rejected="cardStatsItem.rejected"
+        :key="index"
+      />
+    </div>
+    <!-- =========== StatsCards =========== -->
+
+    <div class="flex gap-3">
+      <!-- Chart -->
+      <div
+        class="p-5 md:p-7 h-[65vh] w-3/4 flex bg-white border shadow-sm rounded-xl dark:bg-neutral-800 dark:border-neutral-700"
+      >
+        <canvas id="myChart"></canvas>
       </div>
-      <!-- =========== StatsCards =========== -->
+      <!-- ===========  Chart ===========  -->
 
-      <div class="flex gap-3">
-        <!-- Chart -->
-        <div
-          class="p-5 md:p-7 h-[65vh] w-3/4 flex bg-white border shadow-sm rounded-xl dark:bg-neutral-800 dark:border-neutral-700"
-        >
-          <canvas id="myChart"></canvas>
-        </div>
-        <!-- ===========  Chart ===========  -->
+      <!-- best Drivers  and Customers  -->
+      <div
+        class="classification-pattern transition-all dark:border-neutral-700 dark:hover:border-teal-500/25 p-5 md:p-7 w-1/4 bg-white border-2 shadow-sm rounded-xl dark:bg-neutral-800 text-gray-500 dark:text-neutral-500"
+      >
+        <!-- best Drivers -->
+        <ContentBestDriversTemplate />
+        <!-- ===========  best Drivers  ===========  -->
 
-        <!-- best Drivers  and Customers  -->
-        <div
-          class="classification-pattern transition-all dark:border-neutral-700 dark:hover:border-teal-500/25 p-5 md:p-7  w-1/4 bg-white border-2 shadow-sm rounded-xl dark:bg-neutral-800 text-gray-500 dark:text-neutral-500"
-        >
-          <!-- best Drivers -->
-          <ContentBestDriversTemplate />
-          <!-- ===========  best Drivers  ===========  -->
-
-          <!-- best Customers  -->
-          <ContentBestCustomersTemplate />
-          <!-- ===========  best Customers   ===========  -->
-        </div>
-        <!-- ===========  best Drivers  and Customers  ===========  -->
+        <!-- best Customers  -->
+        <ContentBestCustomersTemplate />
+        <!-- ===========  best Customers   ===========  -->
       </div>
-
-</div>
-  
+      <!-- ===========  best Drivers  and Customers  ===========  -->
+    </div>
+  </div>
 
   <!-- End Content -->
 </template>
@@ -48,11 +46,14 @@
 import { ref, onMounted } from "vue";
 import { Chart, registerables } from "chart.js";
 import cardStatsItems from "./StatsCards/script";
-import { days , numberOrderOfDaysCompelted , numberOrderOfDaysRejected} from './Chart/script';
+import {
+  days,
+  numberOrderOfDaysCompelted,
+  numberOrderOfDaysRejected,
+} from "./Chart/script";
 Chart.register(...registerables);
 
 onMounted(() => {
-  
   if (process.client) {
     const ctx = (
       document.getElementById("myChart") as HTMLCanvasElement
@@ -61,7 +62,7 @@ onMounted(() => {
       0,
       0,
       0,
-      ctx.canvas.height * 3
+      ctx.canvas.height * 3,
     );
     gradientCompelet.addColorStop(0, "rgba(20, 184, 166, 0.5)");
     gradientCompelet.addColorStop(1, "rgba(20, 184, 166, 0)");
@@ -70,7 +71,7 @@ onMounted(() => {
       0,
       0,
       0,
-      ctx.canvas.height * 3.5
+      ctx.canvas.height * 3.5,
     );
     gradientFiled.addColorStop(0, "rgba(239, 68, 68, 0.5)");
     gradientFiled.addColorStop(1, "rgba(239, 68, 68, 0)");
@@ -89,7 +90,7 @@ onMounted(() => {
         },
         {
           label: "المرفوضة",
-          data: numberOrderOfDaysRejected ,
+          data: numberOrderOfDaysRejected,
           borderColor: "rgba(239, 68, 68, 0.5)",
           backgroundColor: gradientFiled,
           fill: true,

@@ -1,5 +1,3 @@
 <template>
-    <div>
-         search order
-    </div>
+  <div>search order</div>
 </template>

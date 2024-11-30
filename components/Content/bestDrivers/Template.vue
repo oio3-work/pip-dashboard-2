@@ -23,8 +23,8 @@
             index + 1 == 1
               ? 'noto:1st-place-medal'
               : index + 1 == 2
-              ? 'noto:2nd-place-medal'
-              : 'noto:3rd-place-medal'
+                ? 'noto:2nd-place-medal'
+                : 'noto:3rd-place-medal'
           "
         >
         </Icon>

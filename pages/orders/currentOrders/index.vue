@@ -1,5 +1,3 @@
 <template>
-    <div>
-          current orders
-    </div>
+  <div>current orders</div>
 </template>

@@ -8,5 +8,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("preline/plugin"), require("@tailwindcss/forms") ,  require('tailwind-scrollbar-hide')],
+  plugins: [
+    require("preline/plugin"),
+    require("@tailwindcss/forms"),
+    require("tailwind-scrollbar-hide"),
+  ],
 };

@@ -1,5 +1,3 @@
 <template>
-    <div  >
-        drivers
-    </div>
+  <div>drivers</div>
 </template>

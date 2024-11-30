@@ -1,5 +1,3 @@
 <template>
-    <div>
-         compeleted orders 
-    </div>
+  <div>compeleted orders</div>
 </template>

@@ -19,7 +19,7 @@ let numberOrderOfDaysCompelted = reactive([
 ]);
 
 let numberOrderOfDaysRejected = reactive([
-    2000, 3050, 2000, 1050, 2000, 0, 4050, 2050, 4000, 250, 4000, 5000,
+  2000, 3050, 2000, 1050, 2000, 0, 4050, 2050, 4000, 250, 4000, 5000,
 ]);
 
-export { days , numberOrderOfDaysCompelted , numberOrderOfDaysRejected }
+export { days, numberOrderOfDaysCompelted, numberOrderOfDaysRejected };

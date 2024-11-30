@@ -1,4 +1,3 @@
 <template>
-   <div><ContentTemplate/></div>
+  <div><ContentTemplate /></div>
 </template>
- 
