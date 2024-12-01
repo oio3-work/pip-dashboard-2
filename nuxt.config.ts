@@ -23,4 +23,5 @@ export default defineNuxtConfig({
     "~/plugins/preline.client.ts",
     { src: "~/plugins/chartjs.ts", mode: "client" },
   ],
+  css: ['@/assets/fonts.css'],
 });

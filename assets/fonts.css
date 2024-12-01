@@ -1,0 +1,89 @@
+/* Regular */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+  }
+  
+  /* ExtraLight */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/assets/fonts/poppins/Poppins-ExtraLight.ttf') format('truetype');
+  }
+  
+  /* Bold */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+  }
+  
+  /* CSS Classes */
+  
+  /* Default Regular */
+  .poppins-regular {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  
+  /* ExtraLight */
+  .poppins-extralight {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+  }
+  
+  /* Bold */
+  .poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+  
+
+
+
+  @font-face {
+    font-family: 'miSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('\assets\fonts\MiSans_Arabic\MiSansArabic-Regular.ttf') format('truetype');
+  }
+  
+  /* ExtraLight */
+  @font-face {
+    font-family: 'miSans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('\assets\fonts\MiSans_Arabic\MiSansArabic-Normal.ttf') format('truetype');
+  }
+  
+  /* Bold */
+  @font-face {
+    font-family: 'miSans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('\assets\fonts\MiSans_Arabic\MiSansArabic-Bold.ttf') format('truetype');
+  }
+  
+  /* CSS Classes */
+  
+  /* Default Regular */
+  .MiSansArabic-regular {
+    font-family: 'miSans', sans-serif;
+    font-weight: 400;
+  }
+  
+  /* ExtraLight */
+  .MiSansArabic-extralight {
+    font-family: 'miSans', sans-serif;
+    font-weight: 200;
+  }
+  
+  /* Bold */
+  .MiSansArabic-bold {
+    font-family: 'miSans', sans-serif;
+    font-weight: 700;
+  }
