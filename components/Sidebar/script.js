@@ -6,7 +6,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "solar:home-2-bold",
-    toPage: "/",
+    toPage: "dashboards/sub-admin",
     children: [],
   },
 
@@ -17,7 +17,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "solar:user-bold",
-    toPage: "/delegates",
+    toPage: "/dashboards/sub-admin/delegates",
     children: [],
   },
   // السواق
@@ -35,7 +35,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "fluent-mdl2:view",
-        toPage: "/drivers/show",
+        toPage: "/dashboards/sub-admin/drivers/show",
       },
       // الرصيد
       {
@@ -44,7 +44,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "healthicons:money-bag-outline",
-        toPage: "/drivers/credit",
+        toPage: "/dashboards/sub-admin/drivers/credit",
       },
       // الطلبات الخارجية
       {
@@ -53,7 +53,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "lineicons:route-1",
-        toPage: "/drivers/out_orders",
+        toPage: "/dashboards/sub-admin/drivers/out_orders",
       },
     ],
   },
@@ -72,7 +72,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "fluent-mdl2:view",
-        toPage: "/customers/show",
+        toPage: "/dashboards/sub-admin/customers/show",
       },
       // نسيان كلمة المرور
       {
@@ -81,7 +81,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "vaadin:password",
-        toPage: "/customers/PasswordOtp",
+        toPage: "/dashboards/sub-admin/customers/PasswordOtp",
       },
       // رموز التسجيل
       {
@@ -90,7 +90,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "mdi:user-key-outline",
-        toPage: "/customers/otp",
+        toPage: "/dashboards/sub-admin/customers/otp",
       },
     ],
   },
@@ -101,7 +101,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "solar:bell-bold",
-    toPage: "/notifications",
+    toPage: "/dashboards/sub-admin/notifications",
     children: [],
   },
   // الطلبات
@@ -111,7 +111,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "streamline:shopping-cart-2-solid",
-    toPage: "/orders",
+    toPage: "/dashboards/sub-admin/orders",
     children: [],
   },
   // خارطة الطلبات
@@ -121,7 +121,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "lets-icons:map-fill",
-    toPage: "/ordersMap",
+    toPage: "/dashboards/sub-admin/ordersMap",
     children: [],
   },
   // طلبات التجار
@@ -139,7 +139,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "text-teal-500",
         icon: "lucide:package-check",
-        toPage: "/tradersRequests/done",
+        toPage: "/dashboards/sub-admin/tradersRequests/done",
       },
       // الكل
       {
@@ -148,7 +148,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "tabler:packages",
-        toPage: "/tradersRequests/all",
+        toPage: "/dashboards/sub-admin/tradersRequests/all",
       },
       // الطلبات الفرعية
       {
@@ -157,7 +157,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "tabler:sitemap",
-        toPage: "/tradersRequests/subOrders",
+        toPage: "/dashboards/sub-admin/tradersRequests/subOrders",
       },
       // حسابات المتاجر
       {
@@ -166,7 +166,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "mdi:store-cog-outline",
-        toPage: "/tradersRequests/accounting",
+        toPage: "/dashboards/sub-admin/tradersRequests/accounting",
       },
     ],
   },
@@ -185,7 +185,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "",
         icon: "fluent-mdl2:view",
-        toPage: "/stores/view",
+        toPage: "/dashboards/sub-admin/stores/view",
       },
       // الموقوفة
       {
@@ -194,7 +194,7 @@ const sideBarItems = [
         data: "",
         coustomClass: "text-red-500",
         icon: "fa:hand-stop-o",
-        toPage: "/stores/disabled",
+        toPage: "/dashboards/sub-admin/stores/disabled",
       },
     ],
   },
@@ -205,7 +205,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "heroicons:users-20-solid",
-    toPage: "/merchants",
+    toPage: "/dashboards/sub-admin/merchants",
     children: [],
   },
   // الاعلانات
@@ -215,7 +215,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "icon-park-solid:ad",
-    toPage: "/ads",
+    toPage: "/dashboards/sub-admin/ads",
     children: [],
   },
   // المنتجات
@@ -225,7 +225,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "fa-solid:boxes",
-    toPage: "/items",
+    toPage: "/dashboards/sub-admin/items",
     children: [],
   },
   // المنتجات والتصنيفات
@@ -235,7 +235,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "iconamoon:category-fill",
-    toPage: "/items_category",
+    toPage: "/dashboards/sub-admin/items_category",
     children: [],
   },
   // الشكاوي
@@ -245,7 +245,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "tabler:help-triangle-filled",
-    toPage: "/complain",
+    toPage: "/dashboards/sub-admin/complain",
     children: [],
   },
   // المقترحات
@@ -255,7 +255,7 @@ const sideBarItems = [
     data: "",
     coustomClass: "",
     icon: "fa6-solid:heart-circle-exclamation",
-    toPage: "/suggestion",
+    toPage: "/dashboards/sub-admin/suggestion",
     children: [],
   },
 ];

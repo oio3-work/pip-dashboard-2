@@ -71,21 +71,21 @@
                 aria-controls="projects-accordion-child"
               >
                 <nuxt-link
-                  :to="sideBarItem.toPage ? sideBarItem.toPage : ''"
-                  class=" w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200"
+                  :to="sideBarItem.toPage && route.fullPath !== sideBarItem.toPage   ? sideBarItem.toPage : ''"  exact
+              class=" w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200"
                 >
                   <Icon
                     class="shrink-0 size-4"
                     :class="sideBarItem.coustomClass"
                     :name="sideBarItem.icon"
                   ></Icon>
-                  <span class="mt-1 font-semibold">{{
+                  <span class="mt-1   font-semibold">{{
                     sideBarItem.label
                   }}</span>
                   <div
                     class="ms-auto"
                     v-if="
-                      sideBarItem.children && sideBarItem.children.length > 0
+                      sideBarItem.children  && sideBarItem.children.length > 0
                     "
                   >
 
@@ -113,7 +113,7 @@
                   <li v-for="child in sideBarItem.children">
                     <nuxt-link
                       class="flex items-center gap-x-2.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200"
-                      :to="child.toPage"
+                      :to=" child.toPage && route.fullPath !== child.toPage ? child.toPage : ''"
                     >
                       <Icon
                         :class="child.coustomClass"
@@ -138,4 +138,13 @@
 
 <script setup>
 import sideBarItems from "./script";
+const route = useRoute()
+console.log(route.fullPath)
+onMounted(()=> {
+   
+
+
+// When accessing /posts/1, route.params.id will be 1
+
+})
 </script>
