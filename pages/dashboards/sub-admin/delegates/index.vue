@@ -35,13 +35,8 @@
               <tbody class="divide-y h-20 overflow-hidden divide-gray-200 dark:divide-neutral-700">
                 <tr  v-for="(tableContentItem, index) in tableContentItems" :key="index">
                  
-                  <td class="size-px whitespace-nowrap" v-for="(item, index) in tableContentItem" :key="index">
-                    <div class="px-6 py-3 md:px-1 md:py-2">
-                      <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">{{ tableContentItem.name }}</span>
-                    </div>
-                  </td>
-
-                  <!-- <td class="ps-6 size-px whitespace-nowrap">
+                 
+                  <td class="ps-6 size-px whitespace-nowrap">
                     <div class="px-6 py-3 md:px-1 md:py-2">
                       <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">{{ tableContentItem.id }}</span>
                     </div>
@@ -82,7 +77,7 @@
                         </button>
                       </div>
                     </div>
-                  </td> -->
+                  </td>
                 </tr>
               </tbody>
             </table>

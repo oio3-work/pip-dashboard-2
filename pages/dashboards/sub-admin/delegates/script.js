@@ -25,7 +25,7 @@ const tableContentItems = reactive([
   {
     id: 1,
     name: "أحمد علي محمد", 
-    address: "بغداد - الكرادة",
+    address: "بغداد - الكرادة", 
     phone: "07844320123",
     gender: "ذكر",
     products: "50 - 100 - 200",

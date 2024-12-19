@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/icon"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/icon", "nuxt-headlessui"],
   plugins: [
     "~/plugins/preline.client.ts",
     { src: "~/plugins/chartjs.ts", mode: "client" },

@@ -22,6 +22,7 @@
     "@nuxt/icon": "^1.8.2",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@tailwindcss/forms": "^0.5.9",
+    "nuxt-headlessui": "^1.2.0",
     "prettier": "^3.4.1"
   }
 }
