@@ -2,16 +2,14 @@
   <div>
     <CustomTable :tableHeaderInformation="tableHeaderInformation" :headers="headers" :actions="tableActions" :rows="tableRows" />
     <button id="buttonModalAdd" type="button" class="hidden" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal-add-delegates" data-hs-overlay="#modal-add-delegates">Open Modal</button>
-    <button id="buttonModalEdit" type="button" class="hidden" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal-edit-delegates" data-hs-overlay="#modal-edit-delegates">Open Modal</button>
 
     <!-- استخدام المكون -->
-    <ModalsModalAdd ref="addModal" modalId="modal-add-delegates" title="اضافة مندوب" content="ggg." :fields="fieldsAddConfig" @submit="handleSubmit()" :loading="isLoadingAdd" />
+    <ModalsModalAdd ref="addModal" modalId="modal-add-delegates" title="اضافة مندوب" content="ggg." :fields="fieldsAddConfig" @submit="handleSubmit" :loading="isLoadingAdd" />
   </div>
 </template>
 
 <script setup>
 import { reactive, ref } from "vue";
-
 
 /* script modal add */
 const addModal = ref(null);
@@ -25,13 +23,14 @@ let fieldsAddConfig = [
 const isLoadingAdd = ref(false);
 
 const handleSubmit = (data) => {
-  console.log("Received data:", data);
-  isLoadingAdd.value = true;
-   console.log(isLoadingAdd.value);
-   
-  setTimeout(() => {
-    isLoadingAdd.value = false;
-  }, 600);
+  
+  if (data) {
+    isLoadingAdd.value = true;
+    // api call
+    setTimeout(() => {
+      isLoadingAdd.value = false;
+    }, 1000);
+  }
 };
 /* ========= script modal add ======= */
 
@@ -85,17 +84,11 @@ let tableActions = [
       fieldsEditConfig.value[2].value = row[2];
       fieldsEditConfig.value[3].value = row[3];
       fieldsEditConfig.value[4].value = row[4];
+      console.log(fieldsEditConfig.value);
+      
+      // buttonModalEdit.click();
 
-      buttonModalEdit.click();
-
-      // modalFields.value = [
-      //   { name: "id", label: "id", type: "text", value: row[0], visble: false },
-      //   { name: "name", label: "الاسم", type: "text", value: row[1], visble: true },
-      //   { name: "address", label: "السكن", type: "text", value: row[2], visble: true },
-      //   { name: "phone", label: "الرقم", type: "text", value: row[3], visble: true },
-      //   { name: "gender", label: "الجنس", type: "radio", value: row[4], visble: true },
-      // ];
-      // showModal.value = true;
+      alert("تعديل: " + JSON.stringify(row));
     },
   },
   {
